@@ -7,21 +7,98 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css">
     </head>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        
-        
-        
-        
-        height: 100vh;
-        margin: 0;
-      }
-      .projects{
-        display: flex;
-        justify-content: center;
-      }
+      
   
-      .code-viewer {
+      
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-python.min.js"></script>
+    <style>
+      body{
+        background-color: #DBE2EF;
+        
+      }
+      
+      .custom-navbar {
+          background-color: #112D4E; /* Custom background color */
+      }
+      .custom-navbar .navbar-brand{
+          color: #ddd; /* Custom text color */
+      }
+      .nav-link {
+          color: #112D4E; /* Custom text color */
+      }
+      .custom-navbar .nav-link:hover {
+          color: #3F72AF; /* Custom hover color */
+      }
+      .navbar ,.container-fluid{
+            margin-top: 0px; /* Remove any top margin */
+            margin-bottom: -1vh;
+            
+            padding-top: 0; /* Remove any top padding */
+            
+        }
+        html{
+          margin: 0;
+        }
+      .navbar-toggler, .navbar-toggler-icon{
+        background-color: #ddd;
+        border: 0px;
+      }
+      .navbar{
+        z-index: 1;
+        width: 100%
+      }
+      .collapse{
+        background-color: #3F72AF;
+      }
+      .navbar-collapse {
+      
+        background-color: #112D4E; /* Background color for collapsed menu */
+        width: 378px;
+        
+
+      }
+      .navbar-brand{
+        font-size: xx-large;
+      }
+    .nav-link{
+      color:#DBE2EF;
+    }
+      .navbar-toggler{
+        padding: 10px;
+        margin:5px;
+        }
+        .navbar-toggler-icon{
+          height: 1.1rem;
+        }
+      @media (max-width: 991px) {
+        .navbar-collapse{
+         
+          padding: 10px;
+          border-radius: 10px;
+        }
+      }
+      @media (max-width: 480px) {
+        .navbar-collapse{
+          padding: 10px;
+          border-radius: 10px;
+        }
+        
+
+      }
+      
+
+    
+     /* part for code viewer*/
+     .project{
+      width:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
+     .code-viewer {
         max-width: 800px;
         width: 100%;
         background-color: #282828; /* Dark background */
@@ -54,97 +131,38 @@
         margin: 0;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-python.min.js"></script>
-    <style>
-      body{
-          background-color: #DBE2EF;
-          
-        }
-        
-        .custom-navbar {
-            background-color: #112D4E; /* Custom background color */
-        }
-        .custom-navbar .navbar-brand,
-        .custom-navbar .nav-link {
-            color: #F9F7F7; /* Custom text color */
-        }
-        .custom-navbar .nav-link:hover {
-            color: #ddd; /* Custom hover color */
-        }
-        .navbar ,.container-fluid{
-              margin-top: 0; /* Remove any top margin */
-              padding-top: 0; /* Remove any top padding */
-              height: 5vh;
-          }
-        .navbar-toggler, .navbar-toggler-icon{
-          background-color: #ddd;
-          border: 0px;
-        }
-  
-        h1{
-          text-align: center;
-        }
-        .navbar{
-          z-index: 1;
-          width: 100%
-        }
-        .collapse{
-          background-color: #112D4E;
-        }
-        .navbar-collapse { 
-          background-color: #112D4E; /* Background color for collapsed menu */
-          width: 100%;
-        }
-        @media (max-width: 991px) {
-        .navbar-collapse{
-          margin-top: 15px;
-          padding: 10px;
-          border-radius: 10px;
-          }
-        }
-        @media (max-width: 480px) {
-        .navbar-collapse{
-          margin-top: 15px;
-          padding: 10px;
-          border-radius: 10px;
-        }
-      }
-  
-      
-       
-      </style>
-      <body>
-          <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar ">
-              <div class="container-fluid custom-navbar">
-                <a class="navbar-brand" href="#">Phi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active navbar-dark">
-                      <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../project.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../contact.html">Contact</a>
-                    </li>
-                  </ul>
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar bg-">
+            <div class="container-fluid custom-navbar">
+              <a class="navbar-brand" href="https://github.com/phinattapat">Phi</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../project.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../contact.html">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
               </div>
-            </nav>
-
+            </div>
+          </nav>
           
 
 
@@ -157,7 +175,7 @@
 
           
   
-
+          
         <div class="projects">
         
         <div class="code-viewer">

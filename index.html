@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>My Portfolio using bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         
       </head>
@@ -16,17 +17,24 @@
       .custom-navbar {
           background-color: #112D4E; /* Custom background color */
       }
-      .custom-navbar .navbar-brand,
-      .custom-navbar .nav-link {
-          color: #F9F7F7; /* Custom text color */
+      .custom-navbar .navbar-brand{
+          color: #ddd; /* Custom text color */
+      }
+      .nav-link {
+          color: #112D4E; /* Custom text color */
       }
       .custom-navbar .nav-link:hover {
-          color: #ddd; /* Custom hover color */
+          color: #3F72AF; /* Custom hover color */
       }
       .navbar ,.container-fluid{
-            margin-top: 0; /* Remove any top margin */
+            margin-top: 0px; /* Remove any top margin */
+            margin-bottom: -1vh;
+            
             padding-top: 0; /* Remove any top padding */
-            height: 5vh;
+            
+        }
+        html{
+          margin: 0;
         }
       .navbar-toggler, .navbar-toggler-icon{
         background-color: #ddd;
@@ -41,28 +49,42 @@
         width: 100%
       }
       .collapse{
-        background-color: #112D4E;
+        background-color: #3F72AF;
       }
       .navbar-collapse {
       
         background-color: #112D4E; /* Background color for collapsed menu */
-        width: 100%;
+        width: 378px;
         
 
       }
+      .navbar-brand{
+        font-size: xx-large;
+      }
+    .nav-link{
+      color:#DBE2EF;
+    }
+      .navbar-toggler{
+        padding: 10px;
+        margin:5px;
+        }
+        .navbar-toggler-icon{
+          height: 1.1rem;
+        }
       @media (max-width: 991px) {
         .navbar-collapse{
-          margin-top: 15px;
+         
           padding: 10px;
           border-radius: 10px;
         }
       }
       @media (max-width: 480px) {
         .navbar-collapse{
-          margin-top: 15px;
           padding: 10px;
           border-radius: 10px;
         }
+        
+
       }
       
 
@@ -70,12 +92,15 @@
      
     </style>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar bg-">
             <div class="container-fluid custom-navbar">
-              <a class="navbar-brand" href="#">Phi</a>
+              <a class="navbar-brand" href="https://github.com/phinattapat">Phi</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
               </button>
+              
+              
+
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
