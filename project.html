@@ -5,6 +5,7 @@
         <title>My Portfolio using bootstrap</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="./nav.css">
     </head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
@@ -21,51 +22,15 @@
         justify-content: center;
         align-items: start;
       }
-      body{
-        background-color: #DBE2EF;
-        
-      }
       
-      .custom-navbar {
-          background-color: #112D4E; /* Custom background color */
-          
-      }
-      .custom-navbar .navbar-brand,
-      .custom-navbar .nav-link {
-          color: #F9F7F7; /* Custom text color */
-      }
-      .custom-navbar .nav-link:hover {
-          color: #ddd; /* Custom hover color */
-      }
-      .navbar ,.container-fluid{
-            margin-top: 0; /* Remove any top margin */
-            margin-bottom: -1vh;
-            padding-top: 0; /* Remove any top padding */
-            
-       }
-      .navbar-toggler, .navbar-toggler-icon{
-        background-color: #ddd;
-        
-        
-      }
+      
 
       h1{
         text-align: center;
       }
-      .navbar{
-        z-index: 1;
-        width: 100%
-      }
       
-      .navbar-collapse {
-        
-        background-color: #112D4E; /* Background color for collapsed menu */
-        width: 100%;
-        
-        
-        
-
-      }
+      
+      
       .btn.btn-primary{
         background-color: #3F72AF;
         border: #3F72AF
@@ -80,11 +45,6 @@
         width:18rem;
       }
       @media (max-width: 991px) {
-        .navbar-collapse{
-          margin-top: 15px;
-          padding: 10px;
-          border-radius: 10px;
-        }
         .container-{
           grid-template-columns: 1fr 1fr;
           
@@ -99,30 +59,12 @@
           grid-template-columns: 1fr;
           
         }
-        .navbar-collapse{
-          padding: 10px;
-          border-radius: 10px;
-        }
         .card{
           width: 16rem;
         }
         
       }
-      .navbar-toggle{
-        padding: 5;
-        border: none;
-
-      }
-      .navbar-toggler{
-        padding: 10px;
-        margin:5px;
-        }
-        .navbar-toggler-icon{
-          height: 1.1rem;
-        }
-        .navbar-brand{
-        font-size: xx-large;
-      }
+      
 
 
     </style>

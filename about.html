@@ -4,78 +4,181 @@
         <meta charset="UTF-8">
         <title>My Portfolio using bootstrap</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="./nav.css">
     </head>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-      body{
-          background-color: #DBE2EF;
+      .container{
+        display: flex;
+        justify-content: center;
+        width: 1000px;
       }
-        .container-fluid{
-            background-color: #112D4E; /* Custom background color */
-        }
-        .navbar .navbar-brand,
-        .navbar .nav-link {
-            color: #F9F7F7; /* Custom text color */
-        }
-        .navbar ,.container-fluid{
-              margin-top: 0; /* Remove any top margin */
-              padding-top: 0; /* Remove any top padding */
-              margin-bottom: -1vh;
-            
-          }
-        .navbar-toggler, .navbar-toggler-icon{
-          background-color: #ddd;
-          
-        }
-  
-        h1{
-          text-align: center;
-        }
-        .navbar{
-          z-index: 1;
-          width: 100%
-        }
-        .collapse{
-          background-color: #112D4E;
-        }
-        .navbar-collapse {
-          
-          background-color: #112D4E; /* Background color for collapsed menu */
-          width: 100%;
-          
-  
-        }
-        @media (max-width: 991px) {
-          .navbar-collapse{
-            
-            padding: 10px;
-            border-radius: 10px;
-          }
-        }
-        @media (max-width: 480px) {
-          .navbar-collapse{
-            
-            padding: 10px;
-            border-radius: 10px;
-          }
-
-        }
-        .navbar-toggler{
+      .about{
+        margin-top: 5vh;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 20px;
+      }
+      .box1,.box2,.box3{
+        background-color: white;
+        border-radius: 20px;
         padding: 10px;
-        margin:5px;
-        }
-        .navbar-toggler-icon{
-          height: 1.1rem;
-        }
-        .navbar-brand{
-        font-size: xx-large;
-        }
-  
+      }
+      .box1{
+        grid-row: span 2;
+        text-align: left;
+        
+      }
+      .title{
+        font-family: "Kanit", sans-serif;
+        font-size: auto;
+        font-weight: 400;
+        font-style: normal;
+        
+      }
+      .text{
+        padding: 20px;
+      }
+      .box2{
+        
+        background-color: white;
+        border-radius: 20px;
+      }
+      .box3{
+        
+        background-color: white;
+        border-radius: 20px;
+      }
+      .phi{
+        
+        max-width: 100%;
+        margin: none;
+        border-radius: 20px;
+        
+      }
+      .box3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lang{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        gap: 10px;
+        border: 1px black solid;
+        min-height: 100%;
+        
+        
+      }
       
-       
-      </style>
+      .lang-logo{
+        height: 6vh;
+      }
+      
+      @media (max-width: 991px) {
+        
+        .container{
+          display: flex;
+          justify-content: center;
+          width: 90%;
+        }
+        .about{
+          margin-top: 5vh;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-template-rows: auto auto;
+          gap: 20px;
+        }
+        .phi{
+        
+          max-width: 100%;
+          margin: none;
+          border-radius: 20px;
+          
+        }
+        .box3{
+            display: flex;
+        
+            justify-content: center;
+        }
+        .lang{
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          grid-template-rows: auto;
+          gap: 10px;
+        }
+        .lang-logo{
+          height:6vh;
+        }
+        
+        
+      }
+      @media (max-width: 480px) {
+        .container{
+          display: flex;
+          justify-content: center;
+          width: 80%;
+          
+        }
+        .about{
+          margin-top: 5vh;
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto auto auto auto;
+          gap: 20px;
+        }
+        p{
+        line-height: 23px;
+        }
+        .title{
+          font-size: 25px;
+        }
+        .box2{
+          order: -1;
+        }
+        .lang{
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto;
+          gap: 10px;
+        }
+        .lang-logo{
+          height: 6vh;
+        }
+      
+      }
+      h6{
+        font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color:orange
+      }
+      p{
+        font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        
+        text-align: justify;
+        
+        
+        
+      }
+      
+      
+      
+      
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <body>
+        <header>
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
                 <a class="navbar-brand" href="https://github.com/phinattapat">Phi</a>
@@ -104,6 +207,7 @@
                 </div>
               </div>
             </nav>
+        </header>
 
 
 
@@ -112,6 +216,35 @@
 
 
 
+
+
+            <div class="container">
+              <div class="about">
+                
+                <div class="box1">
+                  <div class="text">
+                    <h6>About me</h6>
+                    <h1 class="title">My Dream Is Becoming A Programmer</h1>
+                    <p>I'd never written a code before until when I was about 9. That was the first time I'd written a program, and I loved it. my first program was created using Python, And after that, I learned many languages such as HTML CSS JavaScript C, and others. And I want to be a programmer someday.</p>
+                    
+                   
+                  </div>
+                </div>
+                
+                <img src="./images/phi.jpeg" class="phi">
+                
+                <div class="box3">
+                  <div class="logo">
+                    <div class="lang">
+                      <img class="lang-logo" src="./images/c.png" alt="C">
+                      <img class="lang-logo" src="./images/html.png" alt="HTML">
+                      <img class="lang-logo" src="./images/css.png" alt="CSS">
+                      <img class="lang-logo" src="./images/python.png" alt="Python">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
 
