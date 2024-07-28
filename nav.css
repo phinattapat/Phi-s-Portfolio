@@ -1,7 +1,7 @@
 body{
     background-color: #DBE2EF;
 }
-.container-fluid{
+.navbar, .container-fluid{
     background-color: #112D4E; /* Custom background color */
 }
 .navbar .navbar-brand,
