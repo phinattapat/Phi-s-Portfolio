@@ -16,6 +16,7 @@
         display: flex;
         justify-content: center;
         width: 1000px;
+        margin-bottom: 50px;
       }
       .about{
         margin-top: 5vh;
@@ -28,6 +29,7 @@
         background-color: white;
         border-radius: 20px;
         padding: 10px;
+        box-shadow: 3px 1px 10px #2E2E35;
       }
       .box1{
         grid-row: span 2;
@@ -53,12 +55,14 @@
         
         background-color: white;
         border-radius: 20px;
+        
       }
       .phi{
         
         max-width: 100%;
         margin: none;
         border-radius: 20px;
+        box-shadow: 3px 1px 10px #2E2E35;
         
       }
       .box3{
@@ -158,7 +162,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 28px;
-        color:orange
+        color:orange;
       }
       p{
         font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -180,7 +184,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <body>
         <header>
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div id="navbar"></div>
+          <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
                 <a class="navbar-brand" href="https://github.com/phinattapat">Phi</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -207,7 +212,7 @@
                   </form>
                 </div>
               </div>
-            </nav>
+            </nav> -->
         </header>
 
 
@@ -219,50 +224,67 @@
 
 
 
-            <div class="container">
-              <div class="about">
+        <div class="container">
+          <div class="about">
+            
+            <div class="box1">
+              <div class="text">
+                <h6>About me</h6>
+                <h1 class="title">My Dream Is Becoming A Programmer</h1>
+                <p>I'd never written a code before until when I was about 9. That was the first time I'd written a program, and I loved it. my first program was created using Python, And after that, I learned many languages such as HTML CSS JavaScript C, and others. And I want to be a programmer someday.</p>
                 
-                <div class="box1">
-                  <div class="text">
-                    <h6>About me</h6>
-                    <h1 class="title">My Dream Is Becoming A Programmer</h1>
-                    <p>I'd never written a code before until when I was about 9. That was the first time I'd written a program, and I loved it. my first program was created using Python, And after that, I learned many languages such as HTML CSS JavaScript C, and others. And I want to be a programmer someday.</p>
-                    
-                   
-                  </div>
-                </div>
                 
-                <img src="./images/phi.jpeg" class="phi">
-                
-                <div class="box3">
-                  <div class="logo">
-                    <div class="lang">
-                      <img class="lang-logo" src="./images/c.png" alt="C">
-                      <img class="lang-logo" src="./images/html.png" alt="HTML">
-                      <img class="lang-logo" src="./images/css.png" alt="CSS">
-                      <img class="lang-logo" src="./images/python.png" alt="Python">
-                    </div>
-                  </div>
+              </div>
+            </div>
+            
+            <img src="./images/phi.jpeg" class="phi">
+            
+            <div class="box3">
+              <div class="logo">
+                <div class="lang">
+                  <img class="lang-logo" src="./images/c.png" alt="C">
+                  <img class="lang-logo" src="./images/html.png" alt="HTML">
+                  <img class="lang-logo" src="./images/css.png" alt="CSS">
+                  <img class="lang-logo" src="./images/python.png" alt="Python">
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
 
 
-            <footer class="bd-footer">
-              <div class="container">
-                <div class="row">
-                  <div class="name">
-                    
-                    <span class="fs-5">PhiNattapat</span>
-                    
-                    <ul class="list-unstyled small">
-                      <li class="mb-2">Designed and built by Nattapat Nipatjakaranan.</li>
-                      <li class="mb-2">Code licensed <a class="license" href="https://github.com/phinattapat/Phi-s-Portfolio/blob/main/LICENSE">MIT</a>.</li>
-                      <li class="mb-2">Copyright &copy; 2024 Nattapat Nipatjakaranan</li>
-                    </ul>
-                  </div>
+        <footer class="bd-footer">
+          <div id="footer"></div>
+          <!-- <div class="container">
+            <div class="row">
+              <div class="name">
+                
+                <span class="fs-5">PhiNattapat</span>
+                
+                <ul class="list-unstyled small">
+                  <li class="mb-2">Designed and built by Nattapat Nipatjakaranan.</li>
+                  <li class="mb-2">Code licensed <a class="license" href="https://github.com/phinattapat/Phi-s-Portfolio/blob/main/LICENSE">MIT</a>.</li>
+                  <li class="mb-2">Copyright &copy; 2024 Nattapat Nipatjakaranan</li>
+                </ul>
               </div>
-            </footer>
+          </div> -->
+        </footer>
     </body>
+    <script>
+      // Load the navbar dynamically
+      fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+          });
+      
+      // Load the navbar dynamically
+      fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    
 </html>

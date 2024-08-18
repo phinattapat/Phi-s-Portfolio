@@ -1,7 +1,7 @@
-.bd-footer{
+.bd-footer,#footer{
     background-color: #112D4E;
     color:white;
-    margin-top: 10vh;
+    
 }
 .license{
     text-decoration: none;

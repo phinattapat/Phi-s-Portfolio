@@ -10,6 +10,10 @@
     </head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
+      
+    </style>
+    <style>
+      /*
       .container-{
         margin: 20px;
         display: grid;
@@ -67,14 +71,202 @@
       }
       
       
-
-
-    </style>
+      */
+      .header{
+        background-color: #2E2E35;
+        background-color: #112D4E;
+        padding:20px;
+        color:white;
+        
+        
+      }
+      
      
     </style>
+    <style>
+      /* The switch - the box around the slider */
+      .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+    </style>
+    <style>
+      /*
+      .each{
+        display: grid;
+        grid-template-rows: 10vh;
+        grid-template-columns: 25vw 50vw;
+        gap:40px;
+        background-color: white;
+        
+      }
+      .project-picture{
+        height: 100px
+      }
+        */
+    </style>
+    <style>
+      .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 50px;
+        width: fit-content;
+      }
+      :root{
+          --rad: 10px;
+      }
+      
+      .each{
+
+          display:grid;
+          height: auto;
+          
+          grid-template-rows: auto;
+          grid-template-columns: auto auto;
+          /* border:1px black solid; */
+          border-radius: var(--rad);
+          
+          border: white 5px solid;
+          gap: 10px;
+
+          
+      }
+      img {
+        
+        height : 300px;
+      }
+      .text{
+
+          padding: 20px;
+          text-align: left;
+          max-width: 500px;
+          height: fit-content;
+          /* border:1px black solid; */
+      }
+      img{
+          
+          border-radius: var(--rad);
+      }
+      div{
+        border: 1px black sol
+      }
+      @media (max-width: 991px) {
+        .each{
+          grid-template-rows: auto;
+          grid-template-columns: auto auto;
+          
+        }
+        img {
+          width: auto;
+          height : auto;
+          max-height: 100%;
+          max-width: 100%;
+        }
+        
+        
+          
+          
+          
+        
+      
+      }
+      @media (max-width: 480px) {
+        .each{
+          grid-template-rows: auto auto;
+          grid-template-columns: auto;
+          
+          gap:0px;
+        }
+        
+        .text{
+          order: 2;
+        }
+        .container{
+          width: 80%;
+        }
+      }
+      .project-title{
+        color:orange;
+      }
+      .each{
+        background-color: white;
+      }
+      
+      
+    </style>
     <body>
+
+
+      <div id="navbar"></div>
+      <div class="header">
+        <h5>These are</h5>
+        <h1>Projects</h1>
+        <h5>I've done</h5>
+      </div>
+      <!-- <label class="switch">
+        <input type="checkbox" id="testbutton">
+        <span class="slider round"></span>
+      </label> -->
+      
       <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
             <div class="container-fluid custom-navbar">
               <a class="navbar-brand" href="https://github.com/phinattapat">Phi</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,72 +293,84 @@
                 </form>
               </div>
             </div>
-          </nav>
+          </nav> -->
+
+          
       </header>
-          <br>
-          <h1>These are projects I've done</h1>
+    
 
           <div class="projects">
 
-            <div class="container-">
-              <div class="card">
-                  <img src="./images/calculator.png" class="card-img-top" alt="calculator">
-                  <div class="card-body">
-                  <h5 class="card-title">Calculator</h5>
-                  <p class="card-text">A simple calculator create by me using python.</p>
-                  <a href="./public/calculator.html" class="btn btn-primary">Go to project</a>
-                  </div>
-              </div>
+            <div class="container">
               
-              <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go to project</a>
-                  </div>
-              </div>
+              
+              
 
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go to project</a>
-                </div>
-              </div>
+              
             
 
             
-              <div class="card">
-                  <img src="./images/calculator.png" class="card-img-top" alt="calculator">
-                  <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go to project</a>
-                  </div>
-              </div>
               
-              <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go to project</a>
-                  </div>
-              </div>
+              
+              
 
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go to project</a>
-                </div>
-              </div>
-            </div>
+              
+            </div> 
 
           </div>
+          <script src="./project.js"></script>
+          <script>
+      
+            const projectGallerySelection = document.querySelector(".container");
+      
+            addEventListener("DOMContentLoaded",function(){
+              var n = 1;
+              project.forEach(project => {
+              const projectElement = document.createElement("div");
+              projectElement.classList.add("each")
+              if ((n%2)==1){
+                projectElement.classList.add("left")
+                projectElement.innerHTML=`
+              
+                  
+                    <img src="${project.image}" alt="${project.description}" class="images">
+                    
+                    <div class="text">
+                      <h2 class="project-title">${project.title}</h2>
+                      <p class="description">${project.description}</p>
+                    </div>
+                  
+                    
+              `;
+              }
+              else{
+                projectElement.classList.add("right")
+                projectElement.innerHTML=`
+              
+                  
+                    
+                    <div class="text">
+                      <h2 class="project-title">${project.title}</h2>
+                      <p class="description">${project.description}</p>
+                    </div>
+                    
+                    <img src="${project.image}" alt="${project.description}" class="images">
+                  
+                    
+              `;
+              }
+              n = n+1;
+              projectGallerySelection.appendChild(projectElement);
+              });
+              
+      
+      
+            }
+          
+          )
+          </script>
+
+
           
           
 
@@ -181,9 +385,10 @@
 
 
 
-
+          
           <footer class="bd-footer">
-            <div class="container">
+            <div id="footer"></div>
+            <!-- <div class="container">
               <div class="row">
                 <div class="name">
                   
@@ -195,8 +400,42 @@
                     <li class="mb-2">Copyright &copy; 2024 Nattapat Nipatjakaranan</li>
                   </ul>
                 </div>
-            </div>
+            </div> -->
           </footer>
-        
+      
     </body>
+    <script>
+      // Load the navbar dynamically
+      fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+          });
+      
+      // Load the navbar dynamically
+      fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    <!-- <script>
+      let testButton = document.getElementById("testbutton");
+      var Body = document.querySelector("body")
+      var Navbar = document.querySelector("container-fluid")
+      testButton.addEventListener("change", function() {
+        if (this.checked){
+          Body.style.backgroundColor = "#DBE2EF";
+          Navbar.style.backgroundColor = "#112D4E";
+          Navbar.classList.add('bg-color');
+        }
+        else{
+          Body.style.backgroundColor = "";
+          Navbar.style.backgroundColor = "#112D4E";
+          Navber.classList.remove('bg-color');
+        }
+      
+      })
+    </script> -->
+    
 </html>
